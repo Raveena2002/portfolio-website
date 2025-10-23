@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R. Raveena | Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #f9fafb;
+      --bg-dark: #0f172a;
+      --text-light: #1e293b;
+      --text-dark: #f8fafc;
+      --accent: #6366f1;
+      --card-light: #fff;
+      --card-dark: #1e293b;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.4s, color 0.4s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: var(--card-light);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: background 0.4s;
+    }
+
+    body.dark header {
+      background: var(--card-dark);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: inherit;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .toggle {
+      border: none;
+      background: var(--accent);
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: var(--card-light);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeIn 1s forwards;
+      transition: background 0.4s;
+    }
+
+    body.dark section {
+      background: var(--card-dark);
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .skills, .projects, .education, .contact {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--bg-light);
+      padding: 1rem;
+      border-radius: 10px;
+      transition: transform 0.3s, background 0.4s;
+    }
+
+    body.dark .card {
+      background: var(--bg-dark);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    a.button:hover {
+      background: #4f46e5;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin: 0.3rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form button {
+      background: var(--accent);
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>R. Raveena</h1>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle" onclick="toggleMode()">🌙</button>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m <strong>Raveena</strong>, an aspiring Web Developer based in Chennai. Passionate about creating responsive and dynamic web applications using <strong>HTML, CSS, JavaScript, and React</strong>. I love solving real-world problems and continuously learning new technologies.</p>
+    <a class="button" href="raveena (4).pdf" download>📄 Download Resume</a>
+  </section>
+
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><strong>Programming:</strong> Java, JavaScript</div>
+      <div class="card"><strong>Web:</strong> HTML, CSS, React</div>
+      <div class="card"><strong>Database:</strong> MySQL</div>
+      <div class="card"><strong>Tools:</strong> GitHub, VS Code</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Real-Time Cloud-Based Collaborative Code Editor</h3>
+        <p>Developed a platform for simultaneous code writing,editing, and execution with live output sharing. Implemented multi-language support (Python, JavaScript, C++)
+ using Node.js child processes. Integrated real-time synchronization via Socket.IO and secure cloud storage using AWS
+ S3. Designed a modern UI with Next.js, TailwindCSS, and CodeMirror, plus authentication via AWS Cognito..</p>
+        
+      </div>
+      <div class="card">
+        <h3>Online Complaint Registration System (MERN)</h3>
+        <p> An Online Complaint Registration and Management System allows users to easily submit and track complaints through a website or app. It
+ ensures timely updates, assigns issues to relevant departments, and improves response times, transparency, and user
+ satisfaction..</p>
+        <a class="button" href="https://github.com/Raveena2002" target="_blank">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Eve Cuisine</h3>
+        <p>
+ The Eve Cousine Restaurant Website is a simple and elegant web project built with HTML and CSS. It allows users
+ to explore the restaurant’s menu and access signup and login pages, showcasing the use of basic web technologies to
+ create a functional and attractive multi-page website</p>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card"><strong>B.Tech (Information Technology)</strong> — Meenakshi College of Engineering (2025) — CGPA: 7.85</div>
+      <div class="card"><strong>HSC</strong> — Govt. Girls Higher Secondary School, Ashok Nagar (81%)</div>
+      <div class="card"><strong>SSLC</strong> — Annai Theresa Matriculation School (73%)</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Intern — Eagle Hi-Tech Softclou Pvt Ltd (Jul–Aug 2024)</h3>
+      <ul>
+        <li>Designed a responsive restaurant website for menu showcase.</li>
+        <li>Focused on vibrant design and cross-platform compatibility.</li>
+        <li>Optimized performance for fast, seamless browsing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <!-- Replace the link below with your real Formspree link -->
+    <form action="https://formspree.io/f/xkgqlrdn" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> R. Raveenaravichand  ❤️
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
