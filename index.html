@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>R. Raveena | Portfolio</title>
+
+</head>
+<body>
+  <header>
+    <h1>R. Raveena</h1>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="toggle" onclick="toggleMode()">🌙</button>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m <strong>Raveena</strong>, an aspiring Web Developer based in Chennai. Passionate about creating responsive and dynamic web applications using <strong> Java Core, HTML, CSS, JavaScript, and React</strong>. I love solving real-world problems and continuously learning new technologies.</p>
+    <a class="button" href="raveena resume" download>📄 Download Resume</a>
+  </section>
+
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><strong>Programming:</strong> Java, JavaScript</div>
+      <div class="card"><strong>Web:</strong> HTML, CSS, React</div>
+      <div class="card"><strong>Database:</strong> MySQL</div>
+      <div class="card"><strong>Tools:</strong> GitHub, VS Code</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Real-Time Cloud-Based Collaborative Code Editor</h3>
+        <p>Developed a platform for simultaneous code writing,editing, and execution with live output sharing. Implemented multi-language support (Python, JavaScript, C++)
+ using Node.js child processes. Integrated real-time synchronization via Socket.IO and secure cloud storage using AWS
+ S3. Designed a modern UI with Next.js, TailwindCSS, and CodeMirror, plus authentication via AWS Cognito..</p>
+        
+      </div>
+      <div class="card">
+        <h3>Online Complaint Registration System (MERN)</h3>
+        <p> An Online Complaint Registration and Management System allows users to easily submit and track complaints through a website or app. It
+ ensures timely updates, assigns issues to relevant departments, and improves response times, transparency, and user
+ satisfaction..</p>
+        <a class="button" href="https://github.com/Raveena2002" target="_blank">GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Eve Cuisine</h3>
+        <p>
+ The Eve Cousine Restaurant Website is a simple and elegant web project built with HTML and CSS. It allows users
+ to explore the restaurant’s menu and access signup and login pages, showcasing the use of basic web technologies to
+ create a functional and attractive multi-page website</p>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education">
+      <div class="card"><strong>B.Tech (Information Technology)</strong> — Meenakshi College of Engineering (2025) — CGPA: 7.85</div>
+      <div class="card"><strong>HSC</strong> — Govt. Girls Higher Secondary School, Ashok Nagar (81%)</div>
+      <div class="card"><strong>SSLC</strong> — Annai Theresa Matriculation School (73%)</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Intern — Eagle Hi-Tech Softclou Pvt Ltd (Jul–Aug 2024)</h3>
+      <ul>
+        <li>Designed a responsive restaurant website for menu showcase.</li>
+        <li>Focused on vibrant design and cross-platform compatibility.</li>
+        <li>Optimized performance for fast, seamless browsing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <!-- Replace the link below with your real Formspree link -->
+    <form action="https://formspree.io/f/xkgqlrdn" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> R. Raveenaravichand  ❤️
+  </footer>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
